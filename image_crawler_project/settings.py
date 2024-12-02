@@ -27,7 +27,7 @@ import os
 
 DEBUG = os.getenv('DEBUG', 'false').lower() == 'true' 
  # Use environment variable
-ALLOWED_HOSTS = [ '*' ]
+ALLOWED_HOSTS = [ '*','image_crawler.onrender.com' ]
 
 
 
