@@ -27,7 +27,7 @@ import os
 
 DEBUG = os.getenv('DEBUG', 'false').lower() == 'true' 
  # Use environment variable
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = [ '*' ]
 
 
 
