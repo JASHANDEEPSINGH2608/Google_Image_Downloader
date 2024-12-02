@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-(c%dkm1ssa7qhoz0xww#nunmg-l1+4nf5=4862a#vxw^!bq+r=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'image_crawler_project.urls'
@@ -134,3 +136,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER='jashandeepgarry2003@gmail.com'
 EMAIL_HOST_PASSWORD='dnnyqotmdmidytyy'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
