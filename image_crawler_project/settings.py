@@ -23,12 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(c%dkm1ssa7qhoz0xww#nunmg-l1+4nf5=4862a#vxw^!bq+r='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-import os
+DEBUG = True
 
-DEBUG = os.getenv('DEBUG', 'false').lower() == 'true' 
- # Use environment variable
-ALLOWED_HOSTS = ['.vercel.app','.onrender.com', '.now.sh', 'localhost', '*']
-
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -51,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'image_crawler_project.urls'
@@ -115,7 +111,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
@@ -130,15 +125,12 @@ import os
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
-EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'true').lower() == 'true'
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER='jashandeepgarry2003@gmail.com'
+EMAIL_HOST_PASSWORD='dnnyqotmdmidytyy'

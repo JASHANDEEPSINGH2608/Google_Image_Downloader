@@ -19,5 +19,5 @@ from django.urls import path
 from image_crawler import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('download_images/', views.image_download, name='download_images'),
+    path('', views.image_download, name='download_images'),
 ]
