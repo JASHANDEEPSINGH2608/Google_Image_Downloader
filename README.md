@@ -9,8 +9,12 @@ This Django application allows users to download images from Google based on a s
 - **Zip File Creation**: Zips the downloaded images for easy download.
 - **Email Notification**: Sends the zip file to the user's email address.
 
+## Screenshot
+![image](https://github.com/user-attachments/assets/fc458b06-f6e3-4200-bd23-a80a72c841f8)
+
 ## Usage
    ```bash
 google-image-downloader-pi.vercel.app
+
 
    
